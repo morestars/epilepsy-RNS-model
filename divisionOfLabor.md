@@ -11,7 +11,17 @@
 
 ## Ali
 * simulate ECoG data
+  * EEG data set was found by Andrew
 * explore Simulink strategy
+  * missing cortical and sensory inputs. Cannot be completed before Tuesday
+* frequency detection tool
+  * v1 complete
+* pulse generator tool
+  * v1 complete, untested
+* power point presentation
+  * presentation started, all figures added
+  * normal phys
+  * patho phys
 
 ## Shayan
 
@@ -25,3 +35,8 @@
   * similar to how a clinician would increase values and set nominal settings to prevent false positive detections
 * measure false positives, true positives, and false negatives
   * true negatives would just be no stim during regular ECoG
+  
+ ## Presentation
+ * Background
+ * Current Implantable Devices
+ * Future Directions
