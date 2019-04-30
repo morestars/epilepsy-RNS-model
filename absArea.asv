@@ -1,0 +1,18 @@
+%% Absolute Area Under the Curve Tool
+
+function [hit, prevAbsArea] = absArea(ecog,dt,prevAbsArea)
+
+ecogArea = trapz(abs(ecog))*dt;
+
+if abs(ecogArea-prevAbsArea) > *ecogArea %*15
+    hit = 1;
+    prevAbsArea = ecogArea;
+    %prevAbsArea = 10;
+else
+    hit = 0;
+    prevAbsArea = ecogArea;
+    %prevAbsArea = 10;
+end
+
+end
+

@@ -44,12 +44,6 @@ seizureTimesAbsArea = find(hitAbsArea)*step/f;
 
 %% Visualize detection
 figure()
-plot(x,record')
-xlabel('Time (s)')
-ylabel('23-Channel EEG')
-title('Seizure at 1982-2029s')
-
-figure()
 histogram((seizureTimesLineLength))
 hold on
 histogram((seizureTimesAbsArea))
@@ -81,7 +75,7 @@ end
 %% Stimulation
 lead = dtctTime*f;
 %lead = find(x==dtctTime);
-lag = length(record)-lead;
+lag = 
 
             
 
