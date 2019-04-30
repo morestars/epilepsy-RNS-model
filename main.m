@@ -1,7 +1,7 @@
 %% NII Final Project
 % Epilepsy
 %% Load in data
-%[hdr, record] = edfread('chb0x_y.edf');
+%[hdr, record] = edfread('chb0x_yy.edf');
 [hdr, chb03_34] = edfread('chb03_34.edf');
 
 %% Analyze data
@@ -81,7 +81,29 @@ end
 %% Stimulation
 lead = dtctTime*f;
 %lead = find(x==dtctTime);
-lag = length(record)-lead;
+lag = length(record)-lead-520;
+pulse = stimPattern(lead,lag,5,0.0005,0.005,100);
+
+figure()
+subplot(3,1,1)
+plot(x,record')
+xlabel('Time (s)')
+ylabel('23-Channel EEG')
+title('Seizure at 1982-2029s')
+
+subplot(3,1,2)
+plot(x2,hitLineLength,'LineWidth',3)
+hold on
+plot(x2,hitAbsArea,'LineWidth',3)
+xlabel('Time (s)')
+ylabel('Detection (Binary)')
+legend('Line Length Detection','Area Detection')
+hold off
+
+subplot(3,1,3)
+plot(x,pulse,'LineWidth',3)
+xlabel('Time (s)')
+ylabel('Pulse (mA)')
 
             
 

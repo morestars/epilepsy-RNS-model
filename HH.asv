@@ -3,7 +3,6 @@
 Kidx = 1;
 VK = zeros(500001,5);
 
-%diff gbar_K used to simulate diff refractory period
 for K = [32, 34, 35.7, 35.9, 36]
 
 gbar_Na = 120; % mS/cm^3
@@ -112,10 +111,8 @@ Kidx = Kidx + 1;
 end
 
 %% Plot
-xVK = 1:length(VK);
-xVK = xVK/1000;
 figure()
-plot(xVK,VK, '--', 'LineWidth', 3)
+plot(VK, 'LineWidth', 3)
 ylabel('Membrane Voltage (mV)')
-xlabel('Time (ms)')
+xlabel('')
 legend('Neuron 1','Neuron 2','Neuron 3','Neuron 4','Neuron 5')
