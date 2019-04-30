@@ -13,11 +13,12 @@ dLen = sqrt( (diff(ecog).^2 + dt^2 )); % pythagorean distance
 
 totLen = sum(dLen);
 
-if totLen > 6*prevLen % modify to change relative threshold
+if abs(totLen-prevLen) > 4*totLen % modify to change relative threshold
     hit = 1;
+    prevLen = totLen;
 else
     hit = 0;
-    prevLen = (totLen + prevLen)/2;
+    prevLen = totLen;
 end
 
 end

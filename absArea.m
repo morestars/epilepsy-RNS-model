@@ -4,11 +4,14 @@ function [hit, prevAbsArea] = absArea(ecog,dt,prevAbsArea)
 
 ecogArea = trapz(abs(ecog))*dt;
 
-if ecogArea > 1.5*prevAbsArea
+if abs(ecogArea-prevAbsArea) > 30*ecogArea %*15
     hit = 1;
+    prevAbsArea = ecogArea;
+    %prevAbsArea = 10;
 else
     hit = 0;
-    prevAbsArea = mean(prevAbsArea, ecogArea);
+    prevAbsArea = ecogArea;
+    %prevAbsArea = 10;
 end
 
 end
