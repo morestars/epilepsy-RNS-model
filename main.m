@@ -101,7 +101,7 @@ legend('Line Length Detection','Area Detection')
 hold off
 
 subplot(3,1,3)
-plot(x,pulse,'LineWidth',3)
+plot(x(509000:510000),pulse(509000:510000),'LineWidth',1)
 xlabel('Time (s)')
 ylabel('Pulse (mA)')
 
