@@ -223,7 +223,7 @@ end
 xVK = 1:length(VK);
 xVK = xVK/1000;
 figure()
-plot(xVK,VK, '--', 'LineWidth', 3)
+plot(xVK,VK, '--', 'LineWidth', 1)
 ylabel('Membrane Voltage (mV)')
 xlabel('Time (ms)')
 legend('Neuron 1','Neuron 2','Neuron 3','Neuron 4','Neuron 5')
